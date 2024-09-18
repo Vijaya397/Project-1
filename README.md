@@ -30,7 +30,7 @@ The 311 Inquiry Volume dataset contains public inquiries about the City of Vanco
 # Methodology
 ## 1. Data Discovery
 From opendata.vancouver.ca, the Data team identified a robust dataset that could help us answer our initial doubts; the data from the website ensures open Government license, data quality, consistency, and governance, providing flexibility to leverage data effectively.
-
+![Data Discovery](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/Data%20Discovery.png?raw=true)
 The Inquiry Volume dataset provides information about the volumes of inquiries for 2023 and 2024 that come into the 311 contact centers via channels like phone and chat for different departments and many types of queries. This dataset helps analyze the volume of the records for each department (3-1-1 Inquiry Volume, 2024).
 ## 2. Data Storage Design
 In the data storage phase of the AWS Data Analytic Platform, the main objective is to set up a strong foundation and architecture to store the operational as well as the analytical data securely and optimally. This is made possible through Amazon Simple Storage Service (S3), which provides highly accessible, scalable, and durable object storage. S3 is well suited for storing data within a broad range, from raw operational data and analytical data structures to processed datasets, all stored and managed with no compromises on integrity and availability.
