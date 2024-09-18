@@ -16,11 +16,15 @@ The dataset is a part of the 311 Inquiry Volume project for the City of Vancouve
 -	**Number of Records**: The count of inquiries.
 -	**BI_ID**: A unique identifier for each record.
 
-## [Project 2: Analysing Big Data streams in Cloud](https://link-to-your-paper-or-github)
-In this project, a framework is designed and implemented for the efficient analysis of Big Data streams using public cloud resources.  
-- Five algorithms were designed, implemented, and evaluated using real case scenarios.
-- Modules were implemented using Java and Python languages.
-- Improved analysis efficiency by up to 41%.  
+# Background
+The 311 Inquiry Volume dataset contains public inquiries about the City of Vancouver through various channels. This project involves processing the 2023 and 2024 datasets to ensure they are well-organized, accurate, and ready for exploratory analysis. The data is cleaned, transformed, and analyzed using AWS tools like Glue, Athena, and S3 to uncover trends and provide meaningful insights.
+# Scope
+-  Ingest and store the 311 Inquiry Volume dataset in AWS S3.
+-  Perform data cleaning and transformation using AWS Glue.
+-  Conduct exploratory data analysis using AWS Athena.
+-  Use data visualization to uncover trends and insights.
+-  Automate the data pipeline for consistent updates and analysis.
+
 
 ![Big Data Framework](https://github.com/your-github-username/your-repo-name/blob/main/images/bcframework.png)
 
