@@ -25,8 +25,8 @@ The 311 Inquiry Volume dataset contains public inquiries about the City of Vanco
 -  Use data visualization to uncover trends and insights.
 -  Automate the data pipeline for consistent updates and analysis.
 
-![Project1](https://github.com/Vijaya397/Project-1/blob/main/Project1_Draw.io.jpg?raw=true
-)
+![Data Discovery](https://github.com/Vijaya397/Project-1/blob/main/Data%20Discovery.png?raw=true)
+
 # Methodology
 ## 1. Data Discovery
 From opendata.vancouver.ca, the Data team identified a robust dataset that could help us answer our initial doubts; the data from the website ensures open Government license, data quality, consistency, and governance, providing flexibility to leverage data effectively.
