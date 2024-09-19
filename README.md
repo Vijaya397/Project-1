@@ -1,7 +1,4 @@
-
 # Project 1
-Project Portfolio for the 311 Inquiry Volume for the City of Vancouver
-# Project Title 
 Exploratory Data Analysis (EDA) Initiative for 311 Inquiry Volume for the City of Vancouver
 # Project Description 
 The Exploratory Data Analysis (EDA) Initiative aims to gain in-depth insights from the 311 Inquiry Volume dataset by transforming raw data into valuable information that can be used to enhance public services. This involves securely storing the data in AWS S3, applying data cleaning and validation techniques with AWS Glue, and analyzing the dataset using AWS Athena to identify patterns, trends, and relationships. By leveraging AWS services, the project enables the City of Vancouver to make data-driven decisions based on accurate, comprehensive insights derived from the 2023 and 2024 inquiry records.
