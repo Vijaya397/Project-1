@@ -85,35 +85,35 @@ Change Schema in AWS Glue involves modifying the data structure as it's being pr
 ## 9. Data Pipeline Implementation
 The job created in Glue is to load the output in the curated folder of storage of the S3 bucket. We obtained a high-quality analytical dataset in structure format with summarized results in CSV format. However, the data loaded is not in a readable format. So, we need to proceed to the next step.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DataPipelineImplemetation.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/DataPipelineImplemetation.png?raw=true)
 
 ## 10. Data Analysis
 The most crucial goal in this stage is to analyze processed datasets to gain meaningful insights and information. Amazon Athena is an essential tool for this task; it helps perform an interactive query on data stored in Amazon S3 using SQL. 
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/Athena.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/DataVisualisation.png?raw=true)
 
 Athena is an AWS serverless analytical query service that lets you analyze data in S3 using SQL. They support comprehensive data formats, and here, they have AWS glue integration for partitioning the schema. Athena was explicitly designed to cost only for the amount of scanned data, making it easy on the pocket and very accommodating to data scientists. The use case is especially suited for ad hoc querying, log analysis, and querying data in a data lake (What Is Amazon Athena? - Amazon Athena, n.d.).
 ## 11. Data Visualization
 The data can be downloaded in CSV Format and is available in readable format; with the available data, the Excel file generates the recommended charts to be presentable and can be easily analyzed. The developed results are stored in pdf format, so keep the format undisturbed.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DATAVISUAL.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/DATAVISUAL.png?raw=true)
 
 ## 12. Data Publishing
 Amazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud, allowing you to run virtual servers, known as instances, with various configurations based on your needs. EC2 instances, including t2 instances, can be used for a wide range of purposes, such as running general-purpose servers and web servers. T2 instances are designed to provide a baseline level of CPU performance that can burst to higher levels when needed, making them suitable for applications with variable workloads.
 
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/GS.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/GS.png?raw=true)
 
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/GS_console.PNG)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/GS_console.PNG?raw=true)
 
 A general-purpose EC2 server is used for various tasks like providing access to files to remote hosts with security.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/WS.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/WS.png?raw=true)
 
 An EC2 web server is specifically configured to host websites or web applications. It handles clients' HTTP requests and responds to web pages or web applications. It installs the IIS (Internet Information Services) platform from the server manager to host websites, web applications, and services. Making the data accessible from the front, as this is the crucial directory for the context of web servers. With the assigned IP address from the EC2 instance, the data is published and accessed through the Internet.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/WS_Output.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/WS_Output.png?raw=true)
 
 # Tools and Technologies
 - AWS Simple Storage Service (S3): For storing raw, processed, and analyzed data.
