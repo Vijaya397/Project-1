@@ -35,6 +35,8 @@ The Inquiry Volume dataset provides information about the volumes of inquiries f
 ## 2. Data Storage Design
 In the data storage phase of the AWS Data Analytic Platform, the main objective is to set up a strong foundation and architecture to store the operational as well as the analytical data securely and optimally. This is made possible through Amazon Simple Storage Service (S3), which provides highly accessible, scalable, and durable object storage. S3 is well suited for storing data within a broad range, from raw operational data and analytical data structures to processed datasets, all stored and managed with no compromises on integrity and availability.
 
+![DataStorage Design]( https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DataStorageDesign.png?raw=true)
+
 Using Amazon S3, we created three buckets for storing Excel files. S3 buckets are designed so that each bucket can store the data for two years, 2023 and 2024, and every operational bucket has 3 folders: Landing, Raw, and Curated. The operational dataset is loaded into the landing zone in Excel format, and the analytical, structured, cleaned data is loaded into a raw folder of high quality. The analytical data with summarized results are stored in a curated folder in CSV format.
  ## 3. Dataset Preparation
 The main aim of dataset preparation is to assimilate and categorize the data by ensuring the quality and functionality of all s for analysis. This encompasses data ingestion, cleaning, normalization, and structuring. AWS Glue DataBrew is used for data categorization and allows working with different data sources on other platforms. Data preparation takes the ingested data and processes it into format data (What Is AWS Glue DataBrew? - AWS Glue DataBrew, n.d.).
