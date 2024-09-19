@@ -25,17 +25,17 @@ The 311 Inquiry Volume dataset contains public inquiries about the City of Vanco
 -  Use data visualization to uncover trends and insights.
 -  Automate the data pipeline for consistent updates and analysis.
 
-![Project1](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/Project1_Draw.io.jpg?raw=true
+![Project1](https://github.com/Vijaya397/Project-1/blob/main/Project1_Draw.io.jpg?raw=true
 )
 # Methodology
 ## 1. Data Discovery
 From opendata.vancouver.ca, the Data team identified a robust dataset that could help us answer our initial doubts; the data from the website ensures open Government license, data quality, consistency, and governance, providing flexibility to leverage data effectively.
-![Data Discovery](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/Data%20Discovery.png?raw=true)
+![Data Discovery](https://github.com/Vijaya397/Project-1/blob/main/Data%20Discovery.png?raw=true)
 The Inquiry Volume dataset provides information about the volumes of inquiries for 2023 and 2024 that come into the 311 contact centers via channels like phone and chat for different departments and many types of queries. This dataset helps analyze the volume of the records for each department (3-1-1 Inquiry Volume, 2024).
 ## 2. Data Storage Design
 In the data storage phase of the AWS Data Analytic Platform, the main objective is to set up a strong foundation and architecture to store the operational as well as the analytical data securely and optimally. This is made possible through Amazon Simple Storage Service (S3), which provides highly accessible, scalable, and durable object storage. S3 is well suited for storing data within a broad range, from raw operational data and analytical data structures to processed datasets, all stored and managed with no compromises on integrity and availability.
 
-![DataStorage Design]( https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DataStorageDesign.png?raw=true)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/DataStorageDesign.png?raw=true)
 
 Using Amazon S3, we created three buckets for storing Excel files. S3 buckets are designed so that each bucket can store the data for two years, 2023 and 2024, and every operational bucket has 3 folders: Landing, Raw, and Curated. The operational dataset is loaded into the landing zone in Excel format, and the analytical, structured, cleaned data is loaded into a raw folder of high quality. The analytical data with summarized results are stored in a curated folder in CSV format.
  ## 3. Dataset Preparation
@@ -43,9 +43,9 @@ The main aim of dataset preparation is to assimilate and categorize the data by 
 
 In AWS Glue DataBrew, we have created two separate projects, one for each dataset for 2023 and 2024. Cleaning the datasets, we changed the column names and their datatypes and deleted the unwanted columns for precise results. Created two jobs to prepare for two CSV file dataset
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2024datastructuring.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/2023datastructuring.png?raw=true)
 
-![DataStorage Design]( https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2023datastructuring.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/2024datastructuring.png?raw=true)
 
 For both datasets, the subsequent actions were performed:
 -	Rename Type to InquiryType.
@@ -57,20 +57,20 @@ For both datasets, the subsequent actions were performed:
  ## 4. Data Ingestion
 AWS DataBrew is used for ETL job generation, automating and scaling the data ingestion process by consistently applying defined transformations to data. Data ingestion aims to clean and store data in an accessible and consistent central repository to prepare it for use within the organization. It manages the execution, scheduling, and output storage, ensuring efficient and reliable data preparation.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DATAINGESTIONJOBS.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/DATAINGESTIONJOBS.png?raw=true)
 
 Our Data Team created two jobs to prepare for two CSV file datasets. 
 ## 5. Data Storage
 The analytical datasets obtained from Datasets are stored in the raw folders of S3 buckets for each year, respectively. The datasets in the raw folder are of high quality with the structured CSV format.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2023%20RAW.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/2023%20RAW.png?raw=true)
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2024RAW.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/2024RAW.png?raw=true)
 
 ## 6. Data Pipeline Design
 Data pipeline design in AWS Glue involves creating a workflow that automates data ingestion, transformation (ETL), and cataloging. Extract retrieves data from a raw folder from S3 Bucket, and Transform, join. Aggregates are used to normalize and reformat the extracted data to ensure consistency and prepare it for analysis. The output is loaded into the Curated folder of S3 buckets (What Is AWS Glue? - AWS Glue, n.d.).
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/ETLPipeline.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/ETLPipeline.png?raw=true)
 
 The Pipeline is designed with an S3 bucket first to get the data from a raw folder of S3 and then transform the data from functions, the two data tables are then joined to get the consolidated data, and the final output is loaded into the storage of S3 buckets.
 
@@ -80,7 +80,7 @@ In AWS Glue, the filter function is used to refine data during the transformatio
 ## 8. Data Structuring
 Change Schema in AWS Glue involves modifying the data structure as it's being processed, such as adding, removing, or altering columns and column names.
 
-![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/AGG_CHGSCH.png)
+![DataStorage Design](https://github.com/Vijaya397/Project-1/blob/main/AGG_CHGSCH.png?raw=true)
 
 ## 9. Data Pipeline Implementation
 The job created in Glue is to load the output in the curated folder of storage of the S3 bucket. We obtained a high-quality analytical dataset in structure format with summarized results in CSV format. However, the data loaded is not in a readable format. So, we need to proceed to the next step.
