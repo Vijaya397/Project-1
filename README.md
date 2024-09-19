@@ -1,5 +1,5 @@
 
-# DataAnalyst-Vijaya
+# Project 1
 Project Portfolio for the 311 Inquiry Volume for the City of Vancouver
 # Project Title 
 Exploratory Data Analysis (EDA) Initiative for 311 Inquiry Volume for the City of Vancouver
@@ -43,6 +43,10 @@ The main aim of dataset preparation is to assimilate and categorize the data by 
 
 In AWS Glue DataBrew, we have created two separate projects, one for each dataset for 2023 and 2024. Cleaning the datasets, we changed the column names and their datatypes and deleted the unwanted columns for precise results. Created two jobs to prepare for two CSV file dataset
 
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2024datastructuring.png)
+
+![DataStorage Design]( https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2023datastructuring.png)
+
 For both datasets, the subsequent actions were performed:
 -	Rename Type to InquiryType.
 -	Rename Number of Records to Number of Records.
@@ -52,11 +56,21 @@ For both datasets, the subsequent actions were performed:
 -	Create column YearMonth _MONTH using dateTime function MONTH.
  ## 4. Data Ingestion
 AWS DataBrew is used for ETL job generation, automating and scaling the data ingestion process by consistently applying defined transformations to data. Data ingestion aims to clean and store data in an accessible and consistent central repository to prepare it for use within the organization. It manages the execution, scheduling, and output storage, ensuring efficient and reliable data preparation.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DATAINGESTIONJOBS.png)
+
 Our Data Team created two jobs to prepare for two CSV file datasets. 
 ## 5. Data Storage
 The analytical datasets obtained from Datasets are stored in the raw folders of S3 buckets for each year, respectively. The datasets in the raw folder are of high quality with the structured CSV format.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2023%20RAW.png)
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/2024RAW.png)
+
 ## 6. Data Pipeline Design
 Data pipeline design in AWS Glue involves creating a workflow that automates data ingestion, transformation (ETL), and cataloging. Extract retrieves data from a raw folder from S3 Bucket, and Transform, join. Aggregates are used to normalize and reformat the extracted data to ensure consistency and prepare it for analysis. The output is loaded into the Curated folder of S3 buckets (What Is AWS Glue? - AWS Glue, n.d.).
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/ETLPipeline.png)
 
 The Pipeline is designed with an S3 bucket first to get the data from a raw folder of S3 and then transform the data from functions, the two data tables are then joined to get the consolidated data, and the final output is loaded into the storage of S3 buckets.
 
@@ -65,20 +79,42 @@ The Pipeline was created to analyze the volume of inquiries for 2023 and 2024 ba
 In AWS Glue, the filter function is used to refine data during the transformation process by selecting only the rows that meet the criteria. This helps narrow down the dataset to include only the relevant information, improving the efficiency and focus of the analysis.
 ## 8. Data Structuring
 Change Schema in AWS Glue involves modifying the data structure as it's being processed, such as adding, removing, or altering columns and column names.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/AGG_CHGSCH.png)
+
 ## 9. Data Pipeline Implementation
 The job created in Glue is to load the output in the curated folder of storage of the S3 bucket. We obtained a high-quality analytical dataset in structure format with summarized results in CSV format. However, the data loaded is not in a readable format. So, we need to proceed to the next step.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DataPipelineImplemetation.png)
+
 ## 10. Data Analysis
 The most crucial goal in this stage is to analyze processed datasets to gain meaningful insights and information. Amazon Athena is an essential tool for this task; it helps perform an interactive query on data stored in Amazon S3 using SQL. 
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/Athena.png)
 
 Athena is an AWS serverless analytical query service that lets you analyze data in S3 using SQL. They support comprehensive data formats, and here, they have AWS glue integration for partitioning the schema. Athena was explicitly designed to cost only for the amount of scanned data, making it easy on the pocket and very accommodating to data scientists. The use case is especially suited for ad hoc querying, log analysis, and querying data in a data lake (What Is Amazon Athena? - Amazon Athena, n.d.).
 ## 11. Data Visualization
 The data can be downloaded in CSV Format and is available in readable format; with the available data, the Excel file generates the recommended charts to be presentable and can be easily analyzed. The developed results are stored in pdf format, so keep the format undisturbed.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/DATAVISUAL.png)
+
 ## 12. Data Publishing
 Amazon EC2 (Elastic Compute Cloud) provides scalable computing capacity in the AWS cloud, allowing you to run virtual servers, known as instances, with various configurations based on your needs. EC2 instances, including t2 instances, can be used for a wide range of purposes, such as running general-purpose servers and web servers. T2 instances are designed to provide a baseline level of CPU performance that can burst to higher levels when needed, making them suitable for applications with variable workloads.
 
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/GS.png)
+
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/GS_console.PNG)
+
 A general-purpose EC2 server is used for various tasks like providing access to files to remote hosts with security.
 
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/WS.png)
+
 An EC2 web server is specifically configured to host websites or web applications. It handles clients' HTTP requests and responds to web pages or web applications. It installs the IIS (Internet Information Services) platform from the server manager to host websites, web applications, and services. Making the data accessible from the front, as this is the crucial directory for the context of web servers. With the assigned IP address from the EC2 instance, the data is published and accessed through the Internet.
+
+![DataStorage Design](https://github.com/Vijaya397/Data-Analyst-Vijaya/blob/main/Images/WS_Output.png)
+
 # Tools and Technologies
 - AWS Simple Storage Service (S3): For storing raw, processed, and analyzed data.
 - AWS Glue DataBrew: This is used to clean and prepare datasets.
